@@ -1,0 +1,9 @@
+<h1>Tarefa</h1>
+<label>Digite a tarefa: </label>
+<input type="text" [(ngModel)]="t" />
+<button (click)="addTarefa()">Add</button>
+<p>lista de tarefa</p>
+
+<ul *ngFor="let item of exibirTarefa(); index as id">
+  <li>{{ item }} <button (click)="delTarefa(id)">concluida</button></li>
+</ul>
